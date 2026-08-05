@@ -4,10 +4,13 @@ import sys
 import string
 import pandas as pd
 import nltk
+import nltk
 from nltk.corpus import stopwords
 
-nltk.download("stopwords")
-
+try:
+    nltk.data.find("corpora/stopwords")
+except LookupError:
+    nltk.download("stopwords")
 from hate.logger import logging
 from hate.exception import CustomException
 from hate.entity.config_entity import DataTransformationConfig
