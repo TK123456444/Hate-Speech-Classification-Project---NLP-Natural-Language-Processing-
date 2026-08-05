@@ -12,7 +12,7 @@ def get_requirements(file_path):
         requirements.remove(HYPHEN_E_DOT)
 
     return requirements
-
+from setuptools import find_packages, setup
 setup(
     name="hate-speech-classification",
     version="0.0.1",
